@@ -199,46 +199,38 @@ StopButton.pack(side=RIGHT)
 autoClickerRunning = False
 
 
-def autoClickerLoop():
-    global autoClickerRunning, mouseX, mouseY
-
-    while autoClickerRunning:
-        print('click')
-
-        mouseX.set(mouse.position[0])
-        mouseY.set(mouse.position[1])
-
-        mouse.click(MouseButton[selectedMouseButton.get()], 1)
-        time.sleep(1/clicksPerSecond.get())
-
-autoClickerThread = threading.Thread(target=autoClickerLoop)
-
-
 def startStopClicker(event):
     global autoClickerRunning, autoClickerThread
 
-    print(event)
     if autoClickerRunning:  # if the auto clicker is running
-        print('stop')
+        print('stop\n')
         StopButton['state'] = ['disabled']
         StartButton['state'] = ['normal']
         autoClickerRunning = False
 
-        autoClickerThread.run()
-        
     else:  # if the auto clicker is not running
-        print('start')
+        print('start\n')
         StopButton['state'] = ['normal']
         StartButton['state'] = ['disabled']
         autoClickerRunning = True
 
+        def autoClickerLoop():
+            while autoClickerRunning:
+                print('click')
+
+                mouseX.set(mouse.position[0])
+                mouseY.set(mouse.position[1])
+
+                mouse.click(MouseButton[selectedMouseButton.get()], 1)
+                time.sleep(1 / clicksPerSecond.get())
+
+        autoClickerThread = threading.Thread(target=autoClickerLoop)
         autoClickerThread.start()
 
 
 def exitProgram(event):
     global autoClickerThread
-    
-    autoClickerThread.run()
+
     root.destroy()
 
 
