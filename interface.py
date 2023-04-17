@@ -178,8 +178,8 @@ ThirdRowContainer.pack(
 
 StartButton = Button(
     ThirdRowContainer,
-    text='Start',
-    padx=70,
+    text='Start (F9)',
+    padx=60,
     pady=30,
     command=lambda: startStopClicker('<F9>'),
 )
@@ -187,8 +187,8 @@ StartButton.pack(side=LEFT)
 
 StopButton = Button(
     ThirdRowContainer,
-    text='Stop',
-    padx=70,
+    text='Stop (F9)',
+    padx=60,
     pady=30,
     state='disabled',
     command=lambda: startStopClicker('<F9>'),
