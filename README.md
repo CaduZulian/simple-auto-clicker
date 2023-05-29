@@ -1,9 +1,10 @@
 # simple-auto-clicker
+
 Auto clicker simples desenvolvido com python, utilizado como forma de estudo da linguagem e teste de conhecimentos
 
 <div align="center">
-<img src="assets\image.png" alt="simple-auto-clicker"/><br />
-</div>  
+<img src="github\project-image.png" alt="simple-auto-clicker"/><br />
+</div>
 
 ## Ferramentas utilizadas
 
@@ -11,9 +12,9 @@ Auto clicker simples desenvolvido com python, utilizado como forma de estudo da 
 - **[Tkinter](https://docs.python.org/3/library/tkinter.html)**
 - **[Pyinput](https://pypi.org/project/pynput/)**
 
-##  Rodando o projeto
+## Rodando o projeto
 
-Esse projeto é iniciado via terminal, porém é possível iniciá-lo a partir de um arquivo batch, conforme é exemplificado abaixo 
+Esse projeto é iniciado via terminal, porém é possível iniciá-lo a partir de um arquivo batch, conforme é exemplificado abaixo
 
 ```bash
 # Clone este repositório
