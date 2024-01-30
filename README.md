@@ -3,7 +3,7 @@
 Auto clicker simples desenvolvido com python, utilizado como forma de estudo da linguagem e teste de conhecimentos
 
 <div align="center">
-<img src="github\project-image.png" alt="simple-auto-clicker"/><br />
+<img src=".github\project-image.png" alt="simple-auto-clicker"/><br />
 </div>
 
 ## Ferramentas utilizadas
